@@ -10,67 +10,68 @@ To generate the correlation matrix heatmap, the input CSV file must contain nume
 
 
 ## Step-by-Step Tutorial
-1.Install Required Packages 
+1. Install Required Packages 
 
-First, install and load the corrplot and tidyverse package. This package helps you make correlation heatmaps.
-Hmisc package is Used if you want to calculate correlation + p-values.
-2.Import Your Data 
+   First, install and load the corrplot and tidyverse package. This package helps you make correlation heatmaps.
+   Hmisc package is Used if you want to calculate correlation + p-values.
 
-Choose and upload your CSV file using file.choose(). Then R will read your file and store it in a variable.
-3.Prepare Your Data 
+2. Import Your Data 
 
-Make sure your dataset has only numbers. Remove any text columns like sample IDs. Also remove rows with missing values so the correlation works correctly.
-4.Calculate the Correlation Matrix 
+   Choose and upload your CSV file using file.choose(). Then R will read your file and store it in a variable.
 
-Use the cor() function to calculate correlations between all columns in your dataset. This creates a matrix showing how strongly each variable is related to the others.
-5.Create the Correlation Plot 
+3. Prepare Your Data 
 
-Use the corrplot() function to draw the heatmap. The colors show positive or negative relationships. Numbers inside the boxes show the correlation values. The labels are rotated so they are easy to read. The variables are grouped using clustering so similar variables appear next to each other.
-6.Add a Title to the Plot 
+   Make sure your dataset has only numbers. Remove any text columns like sample IDs. Also remove rows with missing values so the correlation works correctly.
 
-Use the title() function to write a clear title above your plot. This makes your figure more understandable.
+4. Calculate the Correlation Matrix 
+
+   Use the cor() function to calculate correlations between all columns in your dataset. This creates a matrix showing how strongly each variable is related to the    others.
+
+5. Create the Correlation Plot 
+
+   Use the corrplot() function to draw the heatmap. The colors show positive or negative relationships. Numbers inside the boxes show the correlation values. The      labels are rotated so they are easy to read. The variables are grouped using clustering so similar variables appear next to each other.
+
+6. Add a Title to the Plot 
+
+   Use the title() function to write a clear title above your plot. This makes your figure more understandable.
 
 ## Use Cases
-Gene Expression Correlation Analysis
+1. Gene Expression Correlation Analysis
 
-Correlation plots help identify co-expressed genes, functional modules, and potential pathways.
-Feature Relationship Analysis
+   Correlation plots help identify co-expressed genes, functional modules, and potential pathways.
 
-Useful for inspecting relationships in metabolomics, proteomics, clinical data, and more.
-Cluster Discovery
+2. Feature Relationship Analysis
 
-Hierarchical clustering helps identify groups of variables that behave similarly.
-Clinical Parameter Correlation 
+   Useful for inspecting relationships in metabolomics, proteomics, clinical data, and more.
 
-Analyze relationships among lab measurements like glucose, hemoglobin, cholesterol, etc.
-Great for finding clinical risk factors or co-varying biomarkers.
-Metabolomics Correlation
+3. Cluster Discovery
 
-Identify correlated metabolites and metabolic pathway patterns from abundance matrices.
-Helps reveal pathway-level regulation trends.
-Proteomics Correlation
+   Hierarchical clustering helps identify groups of variables that behave similarly.
 
-Explore co-regulated proteins using mass-spec intensity or spectral count values.
-Useful in pathway discovery and interaction prediction.
-Microbiome Abundance Correlation
+4. Clinical Parameter Correlation 
 
-Detect co-occurrence or exclusion patterns among genera, families, or ASVs.
-Works once your feature table is numeric.
-Drug Response Correlation
+   Analyze relationships among lab measurements like glucose, hemoglobin, cholesterol, etc.
+   Great for finding clinical risk factors or co-varying biomarkers.
 
-Study associations between gene expression and drug sensitivity metrics like IC50 or AUC.
-Helps identify resistance markers or predictive signatures.
+5. Metabolomics Correlation
 
-Environmental Data Correlation
+   Identify correlated metabolites and metabolic pathway patterns from abundance matrices.
+   Helps reveal pathway-level regulation trends.
 
-Examine relationships among environmental variables such as pH, temperature, and salinity.
-Useful for ecological and environmental modeling.
-Machine Learning Feature Selection
+6. Proteomics Correlation
 
-Identify multicollinearity among features to improve ML model performance.
-Supports dimensionality reduction and preprocessing.
-QC Metrics Correlation in Sequencing
+   Explore co-regulated proteins using mass-spec intensity or spectral count values.
+   Useful in pathway discovery and interaction prediction.
 
-Explore dependencies among QC parameters like read depth, GC%, and duplicate rate.
-Useful for detecting batch effects and sample issues.
+7. Microbiome Abundance Correlation
+
+   Detect co-occurrence or exclusion patterns among genera, families, or ASVs.
+   Works once your feature table is numeric.
+
+8. Drug Response Correlation
+
+   Study associations between gene expression and drug sensitivity metrics like IC50 or AUC.
+   Helps identify resistance markers or predictive signatures.
+
+
 
